@@ -1,0 +1,15 @@
+<div class="container" style="background-image: url(assets/{{currentSentence}}.jpg);">
+  <div class="row">
+    <div class="col text-center">
+        <button class="btn btn-primary m-3 p-3" (click)="prev()">Anterior</button>
+        <button class="btn btn-primary m-3 p-3" (click)="next()">Siguiente</button>
+
+        <ul class="list-group">
+            <li *ngFor="let frase of frases ; let i=index" [ngClass]="{'bg-danger': i==currentSentence}"
+            class="list-group-item border border-dark rounded-pill m-3 p-3">
+            {{ frase }}
+            </li>
+        </ul>
+    </div>
+  </div>
+</div>

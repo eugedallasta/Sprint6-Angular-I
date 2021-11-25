@@ -1,0 +1,9 @@
+<div class="container text-center bg-success bg-opacity-25">
+  <button class="btn btn-success m-5 p-5" (click)="mostrar = !mostrar">
+    Click para comenzar / Volver al inicio
+  </button>
+</div>
+
+<app-escena [frases]="frases" *ngIf="mostrar"></app-escena>
+
+
